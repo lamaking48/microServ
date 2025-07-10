@@ -5,7 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/lamaking48/microServ/tree/main/handlers"
+	// "log"
+	"github.com/lamaking48/microServ/handlers"
 )
 
 func main() {
@@ -14,5 +15,6 @@ func main() {
 
 	sm := http.NewServeMux()
 	sm.Handle("/", hh)
+
 	http.ListenAndServe(":9090", nil)
 }
